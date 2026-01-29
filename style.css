@@ -1,0 +1,194 @@
+
+        :root {
+            --pink: #FF6B82;
+            --dark-pink: #D6455C;
+            --border: #E0E0E0;
+        }
+
+     
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            font-family: poppins,sans-serif;
+            background-color: black;
+        }
+
+        .container {
+            width: 380px;
+          
+            padding: 45px;
+            background-color: white;
+        }
+
+        .header {
+            text-align: center;
+            color: var(--pink);
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header::before, .header::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #eee;
+            margin: 0 15px;
+        }
+
+        /* The Boxes */
+        .option-box {
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            margin-bottom: 15px;
+            padding: 15px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .option-box.active {
+            border: 2px solid var(--pink);
+            background-color: #FFF9FA;
+        }
+
+        /* THE OVERHANGING MOST POPULAR TAG */
+        .popular-tag {
+            position: absolute;
+            top: -12px; 
+            right: 15px;
+            background: var(--pink);
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 2px 2px 0 0;
+            z-index: 10;
+        }
+
+        /* The ribbon fold under the tag */
+        .popular-tag::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            right: 0;
+            border-style: solid;
+            border-width: 5px 5px 0 0;
+            border-color: var(--dark-pink) transparent transparent transparent;
+        }
+
+        .main-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .left-content {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .radio-circle {
+            width: 18px;
+            height: 18px;
+            border: 1.5px solid #ccc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .active .radio-circle { border-color: var(--pink); }
+        .active .radio-circle::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background: var(--pink);
+            border-radius: 50%;
+        }
+
+        .unit-text { font-weight: bold; font-size: 16px; }
+        
+        .discount-badge {
+            background: var(--pink);
+            color: white;
+            font-size: 11px;
+            padding: 2px 6px;
+            border-radius: 2px;
+            margin-left: 8px;
+        }
+
+        .price-col { text-align: right; }
+        .price-now { font-weight: bold; font-size: 16px; }
+        .price-was { font-size: 12px; color: #bbb; text-decoration: line-through; display: block; }
+
+        /* Smooth Expansion */
+        .expand-section {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.6s ease;
+        }
+
+        .active .expand-section {
+            max-height: 120px;
+            margin-top: 15px;
+        }
+
+        /* GRID FOR SELECTS */
+        .select-grid {
+            display: grid;
+            grid-template-columns: 30px 80px 80px; /* Forces width to be small */
+            gap: 10px;
+            align-items: center;
+            font-size: 13px;
+        }
+
+        .grid-header { font-size: 11px; color: #777; margin-bottom: 2px; }
+
+        /* Small Width Select Box */
+        select {
+            width: 100%; /* Fills the 80px column */
+            height: 26px;
+            font-size: 12px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 0 5px;
+            background: #fff;
+        }
+
+        .total-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .add-cart-btn {
+            width: 100%;
+            background: var(--pink);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        .footer-brand {
+            text-align: right;
+            font-size: 11px;
+            color: #ccc;
+            margin-top: 10px;
+            font-style: italic;
+        }
+   
