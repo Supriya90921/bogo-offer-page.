@@ -58,7 +58,7 @@
             background-color: #FFF9FA;
         }
 
-        /* THE OVERHANGING MOST POPULAR TAG */
+        /* THE  MOST POPULAR TAG */
         .popular-tag {
             position: absolute;
             top: -12px; 
@@ -72,7 +72,7 @@
             z-index: 10;
         }
 
-        /* The ribbon fold under the tag */
+       
         .popular-tag::after {
             content: "";
             position: absolute;
@@ -129,7 +129,7 @@
         .price-now { font-weight: bold; font-size: 16px; }
         .price-was { font-size: 12px; color: #bbb; text-decoration: line-through; display: block; }
 
-        /* Smooth Expansion */
+       
         .expand-section {
             max-height: 0;
             overflow: hidden;
@@ -141,10 +141,10 @@
             margin-top: 15px;
         }
 
-        /* GRID FOR SELECTS */
+    
         .select-grid {
             display: grid;
-            grid-template-columns: 30px 80px 80px; /* Forces width to be small */
+            grid-template-columns: 30px 80px 80px; 
             gap: 10px;
             align-items: center;
             font-size: 13px;
@@ -152,9 +152,9 @@
 
         .grid-header { font-size: 11px; color: #777; margin-bottom: 2px; }
 
-        /* Small Width Select Box */
+      
         select {
-            width: 100%; /* Fills the 80px column */
+            width: 100%;
             height: 26px;
             font-size: 12px;
             border: 1px solid #ccc;
@@ -191,4 +191,5 @@
             margin-top: 10px;
             font-style: italic;
         }
+
    
